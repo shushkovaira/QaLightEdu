@@ -2,12 +2,12 @@ package Dz4;
 
 public class MainClassWorkWithMatrix {
     public static void main(String[] args) {
-        int[][] massiveMassive = new int[3][3];
+        int[][] massiveMassive = new int[10][10];
         int valueForFilling ;
         int valueForReplacing ;
 
       WorkWithMassive fillingMassive2Value= new WorkWithMassive();
-      fillingMassive2Value.fillingMassive(massiveMassive,5);
+      fillingMassive2Value.fillingMassive(massiveMassive,7);
       WorkWithMassive printMassive1=new WorkWithMassive();
       printMassive1.printMassive(massiveMassive);
 

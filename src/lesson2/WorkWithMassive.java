@@ -14,5 +14,23 @@ public class WorkWithMassive {
 
         }
     }
+    public static int[][] fillingMassive(int[][]massiveMassive,int valueForFilling) {
+        for (int i = 0; i < massiveMassive.length; i++) {
+            for (int j = 0; j < massiveMassive[i].length; j++) {
+                if (massiveMassive[i][j] != valueForFilling) {
+                    System.out.print(massiveMassive[i][j] == valueForFilling);
+            }
+
+
+            }
+            System.out.println(); {
+
+
+
+    }
+    }
+       return massiveMassive;
 }
+}
+
 

@@ -10,14 +10,12 @@ public class MainClassWorkWithString {
         System.out.println(temp.substring(0, 5));
         System.out.println("3)");
 
-        char[] testStringChar1 = temp1.toCharArray();
-        for (int i = 0; i < testStringChar1.length; i++) {
-        }
-        if (testStringChar1[0] == 'T' || testStringChar1[0] == 't') {
+        if (temp1.startsWith("T")||temp1.startsWith("t"))   {
             System.out.println("The first char is T");
         }
+
         System.out.println("4)");
-        System.out.println(temp1.replace("s","y"));
+        System.out.println(temp1.replaceFirst("s","y"));
 
         }
 
