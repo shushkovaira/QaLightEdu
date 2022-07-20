@@ -1,8 +1,11 @@
 package Currency;
 
- abstract class Currency {
+import java.text.DecimalFormat;
+
+abstract class Currency {
     private double kursNBU;
     private double marga = 1.1;
+    DecimalFormat df=new DecimalFormat("####0.00");
 
     public Currency(double kursNBU) {
         this.kursNBU = kursNBU;
@@ -36,13 +39,17 @@ package Currency;
         double tempResult = numberOfGrn/ getKursBuy();
         System.out.println(
                 String.format("For %s Grn you get %s %s by kurs %s (marga %s)"
-                        ,numberOfGrn,tempResult,getCurrencyName(),getKursBuy(),marga));
+                        ,numberOfGrn,df.format(tempResult),getCurrencyName(),df.format(getKursBuy()),marga));
         return tempResult;
     }
     public double exchangeCurrencyToGrn(double numberOfCurrency){
+
         double tempResult=numberOfCurrency*getKursSell();
         System.out.println(String.format("For %s %s you get %s Grn by kurs %s (marga %s)"
-                ,numberOfCurrency,getCurrencyName(),tempResult,getKursSell(),marga));
+                ,numberOfCurrency,getCurrencyName(),df.format(tempResult),df.format(getKursSell()),marga));
         return tempResult;
     }
-}
+
+        }
+
+

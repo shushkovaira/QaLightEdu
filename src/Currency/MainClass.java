@@ -14,5 +14,8 @@ public class MainClass {
 
         Euro euro = new Euro(38);
         euro.exchangeCurrencyToGrn(1000);
+
+        Bitcoin bitcoin = new Bitcoin(20000);
+        bitcoin.exchangeCurrencyToGrn(1);
     }
 }
