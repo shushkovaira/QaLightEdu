@@ -16,9 +16,11 @@ public class Bitcoin extends Currency implements IsCryptoCurrency {
     }
 
     @Override
-    public double exchangeCurrencyToGrn(double numberOfCurrency) {
+    public double exchangeGrnToCurrency(double numberOfGrn) {
         System.out.println("restriction of NBU");
-        return numberOfCurrency;
+        return numberOfGrn;
     }
+
+
 }
 
