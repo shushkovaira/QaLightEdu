@@ -12,4 +12,15 @@ public class Menu {
             return 0;
         }
     }
+
+    protected static double getDoubleFromConsole() {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            return scanner.nextDouble();
+        } catch (Exception e){
+            System.out.println("Error: wrong value"+e);
+            return 0;
+        }
+
+    }
 }

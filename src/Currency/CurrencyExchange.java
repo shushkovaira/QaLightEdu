@@ -24,6 +24,16 @@ public class CurrencyExchange {
                 workingCurrency=MenuCurrency.setCurrency(currencyNumber);
                 System.out.println("Working currency is "+workingCurrency.getCurrencyName()
                         +" kurs NBU "+workingCurrency.getKursNBU());
+                boolean exitFromActionMenu;
+                do{
+                    MenuActions.printActionMenu(workingCurrency);
+                    int menuNumber=MenuActions.getNumberFromConsole();
+                    exitFromActionMenu=menuNumber!=EXIT_NUMBER;
+                    if(exitFromActionMenu) {
+       //                 System.out.println("menu number" + menuNumber);
+                        MenuActions.doActionsWithCurrency(workingCurrency,menuNumber);
+                    }
+                }while (exitFromActionMenu);
             }
         }while (currencyNumber!=EXIT_NUMBER);
         System.out.println("---GoodBye---");

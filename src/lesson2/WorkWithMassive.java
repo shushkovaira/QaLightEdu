@@ -23,11 +23,11 @@ public class WorkWithMassive {
 
 
             }
-            System.out.println(); {
+            System.out.println();
 
 
 
-    }
+
     }
        return massiveMassive;
 }

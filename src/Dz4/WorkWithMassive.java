@@ -12,8 +12,17 @@ public class WorkWithMassive {
         System.out.println("Matrix is squard");
         return true;
     }
-    public static int[][] createMatrix(int valueForFilling){
-        int[][] massiveMassive = new int[3][3];
+
+    public static int[][] createMatrix(int valueForFilling, int lenght, int wight) {
+
+        int[][] massiveMassive = new int[lenght][wight];
+        if (massiveMassive == null) {
+            try {
+            } catch (Exception e) {
+                System.out.println("Cannot process the array because size is null");
+                e.printStackTrace();
+            }
+        }
         for (int i = 0; i < massiveMassive.length; i++) {
             for (int j = 0; j < massiveMassive.length; j++) {
                 if (massiveMassive[i][j] != valueForFilling) {
@@ -26,12 +35,12 @@ public class WorkWithMassive {
     }
 
 
-    public static int[][] fillingOfRightDiagonal(int[][] massiveMassive, int valueForFillingRight) {
-        if(isMatrixSquard(massiveMassive)==true) {
-            for (int i = 0; i < massiveMassive.length; i++) {
-                for (int j = 0; j < massiveMassive.length; j++) {
+    public static int[][] fillingOfRightDiagonal(int[][] newMassive, int valueForFillingRight) {
+        if (isMatrixSquard(newMassive) == true) {
+            for (int i = 0; i < newMassive.length; i++) {
+                for (int j = 0; j < newMassive.length; j++) {
                     if (i == j) {
-                        massiveMassive[i][j] =  valueForFillingRight;
+                        newMassive[i][j] = valueForFillingRight;
                     }
                 }
                 System.out.println();
@@ -40,7 +49,7 @@ public class WorkWithMassive {
                 }
             }
         }
-        return massiveMassive;
+        return newMassive;
     }
 
     public static void printMassive(int[][] massiveMassive) {
@@ -53,14 +62,15 @@ public class WorkWithMassive {
         System.out.println();
     }
 
-    public static int[][] fillingOfLeftDiagonal(int[][] massiveMassive, int valueForFillingLeftD) {
-        for (int i = 0; i < massiveMassive.length; i++) {
-            for (int j = 0; j < massiveMassive.length; j++) {
-                massiveMassive[i][massiveMassive.length - 1 - i] = valueForFillingLeftD;
+    public static int[][] fillingOfLeftDiagonal(int[][] newMassive, int valueForFillingLeftD) {
+        if (isMatrixSquard(newMassive) == true) {
+            for (int i = 0; i < newMassive.length; i++) {
+                for (int j = 0; j < newMassive.length; j++) {
+                    newMassive[i][newMassive.length - 1 - i] = valueForFillingLeftD;
+                }
             }
         }
-
-        return massiveMassive;
+        return newMassive;
     }
 }
 
