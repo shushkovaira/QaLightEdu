@@ -15,10 +15,10 @@ public class MainClassWorkWithMatrix {
       int[][] newMassive=createMatrix(4,5,5);
 
       fillingOfRightDiagonal(newMassive,1);
-      printMassive(newMassive);
 
       fillingOfLeftDiagonal(newMassive,6);
-      printMassive(newMassive);
+
+      fillingBothdiagonal(newMassive,3,9);
 
     }
 

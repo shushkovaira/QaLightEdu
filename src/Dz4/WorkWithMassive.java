@@ -42,15 +42,15 @@ public class WorkWithMassive {
                     if (i == j) {
                         newMassive[i][j] = valueForFillingRight;
                     }
+                    System.out.println();
                 }
-                System.out.println();
-                System.out.println();
-                {
-                }
+
             }
         }
+        printMassive(newMassive);
         return newMassive;
-    }
+        }
+
 
     public static void printMassive(int[][] massiveMassive) {
         for (int[] ints : massiveMassive) {
@@ -68,8 +68,27 @@ public class WorkWithMassive {
                 for (int j = 0; j < newMassive.length; j++) {
                     newMassive[i][newMassive.length - 1 - i] = valueForFillingLeftD;
                 }
+                System.out.println();
             }
+
         }
+        printMassive(newMassive);
+        return newMassive;
+    }
+    public static int[][] fillingBothdiagonal(int[][] newMassive,int valueForFillingRD,int valueForFillingLD){
+        if (isMatrixSquard(newMassive) == true) {
+            for (int i = 0; i < newMassive.length; i++) {
+                for (int j = 0; j < newMassive.length; j++) {
+                    if (i == j) {
+                        newMassive[i][j] = valueForFillingRD;
+                        newMassive[i][newMassive.length - 1 - i] = valueForFillingLD;
+                    }
+                    System.out.println();
+                }
+            }
+
+        }
+        printMassive(newMassive);
         return newMassive;
     }
 }
